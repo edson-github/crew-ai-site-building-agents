@@ -29,6 +29,11 @@ Este projeto utiliza agentes de IA (CrewAI) para gerar sites de forma automatiza
 
 ## Como Usar
 1. Clone o repositório:
-```plaintext
-git clone https://github.com/seu-usuario/crew-ai-site-building-agents.git
+```txt
+.
+├── 📁 crew-ai-site-building-agents
+│   ├── 📄 main.py             # Arquivo principal com os agentes e interface
+│   ├── 📄 requirements.txt    # Dependências do projeto
+│   ├── 📄 README.md           # Documentação
+│   └── 📁 docs                # Documentação detalhada
 ```
