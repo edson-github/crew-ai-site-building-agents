@@ -44,31 +44,54 @@ def create_site_crew(project_description: str) -> Tuple[str, str]:
     status_text.text("Gerando estrutura HTML...")
     html_task = Task(
         description="""
-        Com base no briefing gerado, crie uma estrutura HTML completa e semântica.
+        Com base no briefing gerado, crie uma estrutura HTML completa e semântica com design profissional.
         
         Requisitos:
-        1. Use HTML5 semântico
+        1. Use HTML5 semântico e CSS moderno
         2. Inclua comentários explicativos
         3. Estruture o código de forma organizada
-        4. Prepare elementos para estilização futura
-        5. Adicione estilos CSS básicos inline para melhor visualização:
-           - Fonte padrão: system-ui
-           - Cores modernas e profissionais
-           - Layout responsivo com flexbox/grid
-           - Espaçamento adequado entre elementos
-           - Header fixo com navegação
-           - Seções bem definidas com padding
-           - Largura máxima de conteúdo
-        6. Adicione animações e elementos visuais:
-           - Efeito de fade-in suave nas seções
-           - Transições suaves no menu
-           - Efeito hover em botões e links
-           - Animações de entrada para elementos principais
-           - Efeitos parallax sutis
-           - Micro-interações nos elementos interativos
+        4. Adicione estilos CSS inline usando variáveis:
+           - Defina variáveis CSS no :root:
+             --primary-color: #0056b3
+             --secondary-color: #28a745
+             --accent-color: #ffcc00
+             --text-color: #333
+             --bg-light: #f8f9fa
+
+        5. Estilização profissional:
+           - Fonte: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto
+           - Header com gradiente: linear-gradient(135deg, var(--primary-color), #003366)
+           - Layout responsivo com max-width: 1200px
+           - Cards com sombras e hover effects
+           - Botões com gradientes e animações
+           - Formulários estilizados com transições
+           - Grid system para serviços
+           - Espaçamento consistente (8px grid)
+
+        6. Animações e interações:
+           - Fade-in nas seções usando keyframes
+           - Transições suaves (0.3s ease)
+           - Efeitos hover com transform
+           - Micro-interações em elementos clicáveis
+           - Animação de pulse em botões
+           
+        7. Responsividade:
+           - Media queries para mobile
+           - Layout flexível
+           - Tipografia responsiva
+           - Navegação adaptativa
+
+        8. Elementos visuais:
+           - Gradientes em títulos
+           - Sombras sutis em cards
+           - Bordas arredondadas
+           - Efeitos de elevação
+           - Feedback visual em interações
+
+        Importante: Todo o CSS deve ser incluído na tag <style> do documento.
         """,
         agent=html_agent,
-        expected_output="Código HTML semântico e bem estruturado para o site com estilos CSS básicos e animações",
+        expected_output="Código HTML semântico e bem estruturado com design profissional",
         context=[briefing_task]
     )
     progress_bar.progress(66)
