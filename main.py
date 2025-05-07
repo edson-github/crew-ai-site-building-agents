@@ -60,12 +60,11 @@ def create_site_crew(project_description: str) -> Tuple[str, str]:
            - Seções bem definidas com padding
            - Largura máxima de conteúdo
         6. Adicione animações e elementos visuais:
-           - Efeito de fade-in suave nas seções ao carregar
-           - Transições suaves no menu de navegação
+           - Efeito de fade-in suave nas seções
+           - Transições suaves no menu
            - Efeito hover em botões e links
-           - Animação de entrada para elementos principais
-           - Efeitos parallax sutis nas imagens
-           - Animações CSS em elementos de destaque
+           - Animações de entrada para elementos principais
+           - Efeitos parallax sutis
            - Micro-interações nos elementos interativos
         """,
         agent=html_agent,
