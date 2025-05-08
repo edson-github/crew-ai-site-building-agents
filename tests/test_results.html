@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Generator Test Results</title>
+    <style>
+        :root {
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --error-color: #dc3545;
+            --primary-color: #0056b3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .summary-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .test-results {
+            margin-bottom: 2rem;
+        }
+
+        .test-case {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            background: #f8f9fa;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .test-case.passed {
+            border-left-color: var(--success-color);
+        }
+
+        .test-case.warning {
+            border-left-color: var(--warning-color);
+        }
+
+        .test-case h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .coverage-report {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        .coverage-report th,
+        .coverage-report td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .coverage-report th {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .coverage-bar {
+            width: 100%;
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .coverage-progress {
+            height: 100%;
+            background: var(--success-color);
+            width: 73%;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Site Generator Test Results</h1>
+
+        <div class="summary">
+            <div class="summary-card">
+                <h2>Total Tests</h2>
+                <p>3</p>
+            </div>
+            <div class="summary-card">
+                <h2>Passed</h2>
+                <p>3 (100%)</p>
+            </div>
+            <div class="summary-card">
+                <h2>Coverage</h2>
+                <p>73%</p>
+                <div class="coverage-bar">
+                    <div class="coverage-progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-results">
+            <h2>Test Cases</h2>
+            <div class="test-case passed">
+                <h3>test_briefing_agent</h3>
+                <p>✓ Verifies briefing agent configuration</p>
+            </div>
+            <div class="test-case passed">
+                <h3>test_create_site_crew</h3>
+                <p>✓ Tests site generation functionality</p>
+            </div>
+            <div class="test-case passed">
+                <h3>test_html_agent</h3>
+                <p>✓ Verifies HTML agent configuration</p>
+            </div>
+        </div>
+
+        <div class="coverage-details">
+            <h2>Coverage Report</h2>
+            <table class="coverage-report">
+                <thead>
+                    <tr>
+                        <th>File</th>
+                        <th>Statements</th>
+                        <th>Missing</th>
+                        <th>Coverage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>main.py</td>
+                        <td>45</td>
+                        <td>18</td>
+                        <td>60%</td>
+                    </tr>
+                    <tr>
+                        <td>test_main.py</td>
+                        <td>26</td>
+                        <td>1</td>
+                        <td>96%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td>71</td>
+                        <td>19</td>
+                        <td>73%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
